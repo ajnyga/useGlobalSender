@@ -118,8 +118,12 @@ class UseGlobalSenderPlugin extends GenericPlugin {
 				if (!$alreadyExists) {
 					$mailer->AddReplyTo($f['email'], $f['name']);
 				}
+
+				$request = Application::getRequest();
+				$site = $request->getSite();
+
 				// Munge the RFC5322.From
-				$f['name'] = $f['name'] . ' via OJS';
+				$f['name'] = $f['name'] . ' via ' . $site->getLocalizedTitle();
 				$f['email'] = Config::getVar('email', 'default_envelope_sender');
 			}
 			// this sets both the envelope sender (RFC5321.MailFrom) and the From: header (RFC5322.From)
