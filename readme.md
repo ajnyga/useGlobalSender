@@ -1,6 +1,6 @@
 
 
-useGlobalSender plugin for OJS 3.1.1+
+useGlobalSender plugin for OJS 3. Requires the master branch version of mail.inc.php.
 
 If force_envelope_sender is enabled and envelope_sender address given, the plugin will replace all from fields with the envelope_sender address and move the users address to a reply-to field.
 
