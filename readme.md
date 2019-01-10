@@ -6,3 +6,6 @@ If force_envelope_sender is enabled and envelope_sender address given, the plugi
 
 Based on pull request: https://github.com/pkp/pkp-lib/pull/4165
 
+**Disclaimer: The plugin is experimental and not much tested. It may affect the OJS email log.**
+
+
