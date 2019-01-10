@@ -160,13 +160,13 @@ class UseGlobalSenderPlugin extends GenericPlugin {
 			$success = $mailer->Send();
 			if (!$success) {
 				error_log($mailer->ErrorInfo);
-				return false;
+				return true;
 			}
 		} catch (phpmailerException $e) {
 			error_log($mailer->ErrorInfo);
-			return false;
+			return true;
 		}
-		return true;
+		return false;
 
 	}
 
